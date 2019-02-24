@@ -1,0 +1,10 @@
+.option-header {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.option-select {
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 100px;
+}

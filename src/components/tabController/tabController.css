@@ -18,20 +18,20 @@
 
 .tab-heading:focus {
     outline: none;
-    border-bottom: 1px solid var(--highlight-color);
-    margin-bottom: 3px;
+    border-bottom: 2px solid var(--highlight-color);
+    margin-bottom: 2px;
 }
 
 .tab-active {
     color: var(--main-font-color);
-    margin-bottom: 1px;
-    border-bottom: 3px solid var(--highlight-color);
+    border-bottom: 4px solid var(--highlight-color);
+    margin-bottom: 0x;
 }
 
 .tab-active:focus {
     outline: none;
-    margin-bottom: 0px;
-    border-bottom: 4px solid var(--highlight-color);
+    border-bottom: 2px solid var(--highlight-color);
+    margin-bottom: 2px;
 }
 
 .tab-hr {

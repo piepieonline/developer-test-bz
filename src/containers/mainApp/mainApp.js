@@ -53,7 +53,15 @@ class MainApp extends Component {
             ]
         };
 
-        this.state = {};
+        this.state = {
+            selectedImage: ProductImageBlack
+        };
+    }
+
+    selectImage = (colourVariantIndex) => {
+        this.setState({
+            selectedImage: this.content.options[0].values[colourVariantIndex].productImage
+        });
     }
 
     render() {
@@ -70,14 +78,16 @@ class MainApp extends Component {
                     <div className="item-details">
                         <TabController tabs={this.content.tabs} />
                         <ItemPrice price={this.content.prices.standard} salePrice={this.content.prices.sale} />
-                        <OptionSet options={this.content.options} />
+                        <OptionSet options={this.content.options} changeOption={(type, value) => {
+                            this.selectImage(value);
+                        }} />
                     </div>
                     <div className="cart-controls">
                         <hr />
                         <CartButton />
                     </div>
                     <div className="product-image-container">
-                        <img className="product-image" src={ProductImageBlack} alt="Product" />
+                        <img className="product-image" src={this.state.selectedImage} alt="Product" />
                     </div>
                 </div>
             </div>
