@@ -1,0 +1,12 @@
+.item-title {
+    margin: 20px 0 15px;
+}
+
+.item-title-heading {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.item-title-subtitle {
+    color: var(--subtle-font-color);
+}

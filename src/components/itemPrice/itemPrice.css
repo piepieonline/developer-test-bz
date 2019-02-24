@@ -1,5 +1,12 @@
+.price-container {
+    padding: 25px 0;
+}
+
 .price {
+    margin-right: 20px;
+
     font-weight: bolder;
+    font-size: 1.7em;
 }
 
 .on-sale {

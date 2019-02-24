@@ -1,16 +1,39 @@
 .tab-heading {
-    border: none;
     background: none;
+    border: none;
+    padding-bottom: 8px;
 
     color: var(--subtle-font-color);
     text-transform: uppercase;
     font-weight: bolder;
+
+    padding: 15px 15px 11px;
+
+    margin-right: 30px;
+}
+
+.tab-heading:hover {
+    filter: brightness(80%);
+}
+
+.tab-heading:focus {
+    outline: none;
+    border-bottom: 1px solid var(--highlight-color);
+    margin-bottom: 3px;
 }
 
 .tab-active {
     color: var(--main-font-color);
+    margin-bottom: 1px;
+    border-bottom: 3px solid var(--highlight-color);
+}
+
+.tab-active:focus {
+    outline: none;
+    margin-bottom: 0px;
+    border-bottom: 4px solid var(--highlight-color);
 }
 
 .tab-hr {
-    margin: 0 0 15px;
+    margin-bottom: 15px;
 }

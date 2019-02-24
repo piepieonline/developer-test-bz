@@ -17,6 +17,7 @@ class CartButton extends Component {
         return (
             <input
                 type="button"
+                className="cart-button"
                 value={this.state.callToAction.label}
                 disabled={this.state.callToAction.disabled}
                 onClick={() => {

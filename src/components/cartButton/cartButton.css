@@ -1,0 +1,22 @@
+.cart-button {
+    --border-radius: 5px;
+    --padding: 20px 50px;
+
+    border: none;
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    background: var(--highlight-color);
+
+    color: var(--highlight-text-color);
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.cart-button:hover {
+    filter: brightness(105%);
+}
+
+.cart-button:disabled {
+    box-shadow: none;
+    background: var(--highlight-disabled-color);
+}

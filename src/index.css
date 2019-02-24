@@ -7,16 +7,16 @@ body {
   padding: 0;
 
   color: var(--main-font-color);
-  overflow: hidden;
+  background-color: var(--outside-background-color);
 }
 
 hr {
   border: none;
   border-top: 1px solid var(--border-color);
+  margin: 0 -60px;
 }
 
 #root {
   display: flex;
-  height: 100vh;
-  background-color: var(--outside-background-color);
+  min-height: 100vh;
 }

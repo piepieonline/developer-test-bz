@@ -6,7 +6,7 @@ class ItemPrice extends Component {
         const { salePrice, price } = this.props;
 
         return (
-            <div>
+            <div className="price-container">
                 <span className="price">${ salePrice }</span>
                 <span className={`price ${ salePrice && 'on-sale'}`}>${ price }</span>
             </div>

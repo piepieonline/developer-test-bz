@@ -29,11 +29,9 @@ class TabController extends Component {
                     }
                 </div>
                 <hr className="tab-hr" />
-                <div>
-                    {
-                        tabs[this.state.currentTabIndex].content
-                    }
-                </div>
+                {
+                    tabs[this.state.currentTabIndex].content
+                }
             </div>
         );
     }
