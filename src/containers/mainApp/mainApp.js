@@ -62,7 +62,7 @@ class MainApp extends Component {
                 <div className="product-view-grid">
                     <div className="header">
                         { /* This link is intentionally invalid, due to the demonstration nature of this page  */}
-                        <a href="#">🡐 All products</a> { /* eslint-disable-line jsx-a11y/anchor-is-valid */}
+                        <a href="#" className="back-link">All products</a> { /* eslint-disable-line jsx-a11y/anchor-is-valid */}
                     </div>
                     <div className="item-header">
                         <ItemTitle title={this.content.title} subtitle={this.content.subtitle} />
