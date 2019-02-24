@@ -1,0 +1,44 @@
+@import "../../theme.css";
+
+.product-view {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas:
+        "header product-image"
+        "item-header product-image"
+        "item-details product-image"
+        "cart-controls product-image";
+    grid-template-columns: 1fr auto;
+
+    width: 90%;
+
+    background-color: var(--inside-background-color);
+}
+
+.header {
+    grid-area: header;
+}
+
+.item-header {
+    grid-area: item-header;
+}
+
+.item-header-subtitle {
+    color: var(--subtle-font-color);
+}
+
+.item-details {
+    grid-area: item-details;
+}
+
+.cart-controls {
+    grid-area: cart-controls;
+}
+
+.product-image {
+    grid-area: product-image;
+    border-left: 1px solid var(--border-color);
+    /* TODO */
+    max-height: 80vh;
+}

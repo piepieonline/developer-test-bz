@@ -1,0 +1,8 @@
+.price {
+    font-weight: bolder;
+}
+
+.on-sale {
+    color: var(--subtle-font-color);
+    text-decoration: line-through;
+}

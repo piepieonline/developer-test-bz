@@ -20,6 +20,7 @@ class TabController extends Component {
                         tabs.map((tab, index) => (
                             <button
                                 key={tab.title}
+                                className={`tab-heading ${index === this.state.currentTabIndex && 'tab-active'}`}
                                 onClick={() => this.setState({ currentTabIndex: index }) }
                             >
                                 { tab.title }
@@ -27,6 +28,7 @@ class TabController extends Component {
                         ))
                     }
                 </div>
+                <hr className="tab-hr" />
                 <div>
                     {
                         tabs[this.state.currentTabIndex].content

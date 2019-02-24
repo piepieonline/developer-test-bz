@@ -1,0 +1,16 @@
+.tab-heading {
+    border: none;
+    background: none;
+
+    color: var(--subtle-font-color);
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.tab-active {
+    color: var(--main-font-color);
+}
+
+.tab-hr {
+    margin: 0 0 15px;
+}
