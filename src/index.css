@@ -8,6 +8,7 @@ body {
 
   color: var(--main-font-color);
   background-color: var(--outside-background-color);
+  font-family: 'Quicksand', sans-serif;
 }
 
 hr {
