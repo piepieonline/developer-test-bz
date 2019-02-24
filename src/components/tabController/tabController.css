@@ -35,5 +35,9 @@
 }
 
 .tab-hr {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+p {
+    line-height: 1.4;
 }

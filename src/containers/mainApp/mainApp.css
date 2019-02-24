@@ -58,10 +58,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 60px;
 }
 
 .product-image {
     max-width: 35vw;
+    max-height: 80vh;
 }
 
 @media (max-width: 900px) {
@@ -77,5 +79,9 @@
 
     .cart-controls {
         text-align: center;
+    }
+
+    .product-image-container {
+        padding: 20px;
     }
 }
