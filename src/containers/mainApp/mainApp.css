@@ -41,7 +41,7 @@
 
 .item-header {
     grid-area: item-header;
-    padding: 0 var(--inside-padding);
+    padding: 10px var(--inside-padding) 30px;
 }
 
 .item-details {

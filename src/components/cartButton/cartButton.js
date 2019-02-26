@@ -64,7 +64,7 @@ class CartButton extends Component {
                     }}
                 />
                 <div className="cart-button-status-popup" style={{ opacity: this.state.popupOpacity }}>
-                    <span className="cart-button-status">Item added to cart successfully!</span>
+                    <span className="cart-button-status">Item added to cart!</span>
                 </div>
             </div>
         );

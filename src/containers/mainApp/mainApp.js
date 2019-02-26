@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { JSONPath } from 'jsonpath-plus';
 
 import TabController from '../../components/tabController/tabController';
 import ItemPrice from '../../components/itemPrice/itemPrice';
@@ -12,15 +13,30 @@ class MainApp extends Component {
     constructor(props) {
         super(props);
 
+        // If there is a default product image specifed, use it
+        let defaultProductImage;
+        if (this.props.content.defaultProductImagePath) {
+            defaultProductImage = JSONPath({
+                json: this.props.content,
+                path: this.props.content.defaultProductImagePath
+            });
+        }
+
         this.state = {
-            selectedImage: this.props.content.options.filter((option) => option.type === 'Colours')[0].values[0].productImage
+            selectedImage: defaultProductImage
         };
     }
 
-    selectImage = (type, colourVariantIndex) => {
-        this.setState({
-            selectedImage: this.props.content.options.filter((option) => option.type === type)[0].values[colourVariantIndex].productImage
-        });
+    selectImage = (type, variantIndex) => {
+        // Change the product image, if the selected option defines one
+        let newImage = this.props.content.options
+            .filter((option) => option.type === type)[0]
+            .values[variantIndex].productImage;
+        if (newImage) {
+            this.setState({
+                selectedImage: newImage
+            });
+        }
     }
 
     render() {
