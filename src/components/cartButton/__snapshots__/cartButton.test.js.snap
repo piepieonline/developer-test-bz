@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the expected HTML 1`] = `
+<div>
+  <div
+    class="cart-button-container"
+  >
+    <input
+      class="cart-button"
+      type="button"
+      value="Add to Cart"
+    />
+    <div
+      class="cart-button-status-popup"
+      style="opacity: 0;"
+    >
+      <span
+        class="cart-button-status"
+      >
+        Item added to cart!
+      </span>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the expected HTML 1`] = `
+<div>
+  <header
+    class="item-title"
+  >
+    <h1
+      class="item-title-heading"
+    >
+      title
+    </h1>
+    <span
+      class="item-title-subtitle"
+    >
+      subtitle
+    </span>
+  </header>
+</div>
+`;

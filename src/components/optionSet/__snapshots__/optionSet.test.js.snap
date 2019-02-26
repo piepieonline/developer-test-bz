@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the expected HTML when empty 1`] = `<div />`;
+
+exports[`renders the expected HTML when filled with one option (Colours) 1`] = `
+<div>
+  <div
+    class="options"
+  >
+    <div>
+      <h3
+        class="option-header"
+      >
+        Colors
+      </h3>
+      <select
+        class="option-select"
+      >
+        <option
+          value="0"
+        >
+          Black
+        </option>
+        <option
+          value="1"
+        >
+          Brown
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+`;

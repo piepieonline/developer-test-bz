@@ -11,7 +11,7 @@ class OptionSet extends Component {
     render() {
         const { options } = this.props;
 
-        return (
+        return options ? (
             <div className="options">
             {
                 options.map(options => (
@@ -28,7 +28,7 @@ class OptionSet extends Component {
                 ))
             }
             </div>
-        );
+        ) : null;
     }
 }
 

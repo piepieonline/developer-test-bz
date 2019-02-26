@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the expected HTML (no sale price) 1`] = `
+<div>
+  <div
+    class="price-container"
+  >
+    <span
+      class="price"
+    >
+      $
+      10.00
+    </span>
+  </div>
+</div>
+`;
+
+exports[`renders the expected HTML (sale price) 1`] = `
+<div>
+  <div
+    class="price-container"
+  >
+    <span
+      class="price"
+    >
+      $
+      5.00
+    </span>
+    <span
+      class="price on-sale"
+    >
+      $
+      10.00
+    </span>
+  </div>
+</div>
+`;
