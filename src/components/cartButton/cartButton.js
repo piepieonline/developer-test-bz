@@ -9,34 +9,64 @@ class CartButton extends Component {
             callToAction: {
                 disabled: false,
                 label: 'Add to Cart'
-            }
+            },
+            popupOpacity: 0,
+            orderComplete: false
         };
     }
 
+    setToLoading = () => new Promise((resolve) => {
+        const ORDER_COMPLETE_TIME = 2000;
+        
+        this.setState({
+            callToAction: {
+                disabled: true,
+                label: 'Loading...'
+            }
+        }, () => {
+            window.setTimeout(() => resolve(), ORDER_COMPLETE_TIME)
+        });
+    });
+
+    setToViewCart = () => {
+        const POPUP_DISPLAY_TIME = 5000;
+        
+        // Show the popup, and automatically hide it after a set period
+
+        this.setState({
+            callToAction: {
+                disabled: false,
+                label: 'View Cart'
+            },
+            popupOpacity: 1,
+            orderComplete: true
+        });
+
+        window.setTimeout(() => {
+            this.setState({
+                popupOpacity: 0
+             });
+        }, POPUP_DISPLAY_TIME);
+    };
+
     render() {
         return (
-            <input
-                type="button"
-                className="cart-button"
-                value={this.state.callToAction.label}
-                disabled={this.state.callToAction.disabled}
-                onClick={() => {
-                    this.setState({
-                        callToAction: {
-                            disabled: true,
-                            label: 'Loading...'
+            <div className="cart-button-container">
+                <input
+                    type="button"
+                    className="cart-button"
+                    value={this.state.callToAction.label}
+                    disabled={this.state.callToAction.disabled}
+                    onClick={() => {
+                        if(!this.state.orderComplete) {
+                            this.setToLoading().then(this.setToViewCart)
                         }
-                    });
-                    window.setTimeout(() => {
-                        this.setState({
-                            callToAction: {
-                                disabled: false,
-                                label: 'View Cart'
-                            }
-                        });
-                    }, 2000)
-                }}
-            />
+                    }}
+                />
+                <div className="cart-button-status-popup" style={{ opacity: this.state.popupOpacity }}>
+                    <span className="cart-button-status">Item added to cart successfully!</span>
+                </div>
+            </div>
         );
     }
 }
